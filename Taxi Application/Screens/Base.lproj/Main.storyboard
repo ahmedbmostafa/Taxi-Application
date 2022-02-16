@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="or3-Kf-KYW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Arabic-Medium.ttf">
+            <string>Montserrat-Arabic-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="MainVC" customModule="Taxi_Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9v-sp-0UU" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGQ-0f-2iW" customClass="RoundViewBorder" customModule="Taxi_Application" customModuleProvider="target">
+                                <rect key="frame" x="87" y="64" width="240" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aae-uO-NI1">
+                                        <rect key="frame" x="20" y="11.5" width="112.5" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Arabic-Medium" family="Montserrat-Arabic" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imD-og-TRH" customClass="RoundView" customModule="Taxi_Application" customModuleProvider="target">
+                                        <rect key="frame" x="205" y="12.5" width="15" height="15"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="Dso-y5-x0r"/>
+                                            <constraint firstAttribute="width" constant="15" id="iob-0n-5sU"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="aae-uO-NI1" firstAttribute="centerY" secondItem="sGQ-0f-2iW" secondAttribute="centerY" id="5nB-lk-cyC"/>
+                                    <constraint firstItem="aae-uO-NI1" firstAttribute="leading" secondItem="sGQ-0f-2iW" secondAttribute="leading" constant="20" id="JUp-2n-Wgm"/>
+                                    <constraint firstAttribute="trailing" secondItem="imD-og-TRH" secondAttribute="trailing" constant="20" id="ObA-n1-AAe"/>
+                                    <constraint firstItem="imD-og-TRH" firstAttribute="centerY" secondItem="sGQ-0f-2iW" secondAttribute="centerY" id="UkD-XE-88P"/>
+                                    <constraint firstAttribute="height" constant="40" id="j1S-rc-uFj"/>
+                                    <constraint firstAttribute="width" constant="240" id="xTp-zl-WvZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDZ-DJ-adE" customClass="RoundViewBorder" customModule="Taxi_Application" customModuleProvider="target">
+                                <rect key="frame" x="87" y="112" width="240" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uZ-Ad-cMs">
+                                        <rect key="frame" x="20" y="11.5" width="145.5" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Arabic-Medium" family="Montserrat-Arabic" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmT-yC-5NO" customClass="RoundView" customModule="Taxi_Application" customModuleProvider="target">
+                                        <rect key="frame" x="205" y="12.5" width="15" height="15"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="cp0-5U-y1s"/>
+                                            <constraint firstAttribute="width" constant="15" id="wGQ-zO-b5H"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="4uZ-Ad-cMs" firstAttribute="leading" secondItem="dDZ-DJ-adE" secondAttribute="leading" constant="20" id="0ol-dg-FPi"/>
+                                    <constraint firstAttribute="width" constant="240" id="CjR-2p-X8O"/>
+                                    <constraint firstAttribute="trailing" secondItem="dmT-yC-5NO" secondAttribute="trailing" constant="20" id="OUL-we-dM9"/>
+                                    <constraint firstItem="dmT-yC-5NO" firstAttribute="centerY" secondItem="dDZ-DJ-adE" secondAttribute="centerY" id="bMF-Oq-4AM"/>
+                                    <constraint firstItem="4uZ-Ad-cMs" firstAttribute="centerY" secondItem="dDZ-DJ-adE" secondAttribute="centerY" id="bha-oG-gev"/>
+                                    <constraint firstAttribute="height" constant="40" id="l4N-Cp-d9r"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.086274509803921567" green="0.56470588235294117" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dDZ-DJ-adE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="93D-gH-wZQ"/>
+                            <constraint firstItem="sGQ-0f-2iW" firstAttribute="top" secondItem="H9v-sp-0UU" secondAttribute="top" constant="20" id="OeN-N8-Yhn"/>
+                            <constraint firstItem="sGQ-0f-2iW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RsD-va-5e6"/>
+                            <constraint firstItem="dDZ-DJ-adE" firstAttribute="top" secondItem="sGQ-0f-2iW" secondAttribute="bottom" constant="8" id="fQw-gO-yQ1"/>
+                            <constraint firstItem="H9v-sp-0UU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iST-eT-rIM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H9v-sp-0UU" secondAttribute="trailing" id="j1V-zM-gVA"/>
+                            <constraint firstItem="H9v-sp-0UU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qhF-vs-H6u"/>
+                            <constraint firstItem="H9v-sp-0UU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zfd-BZ-7fY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="destinationMainView" destination="dDZ-DJ-adE" id="v2t-MQ-aJo"/>
+                        <outlet property="destinationView" destination="dmT-yC-5NO" id="uIR-gh-SDO"/>
+                        <outlet property="mapView" destination="H9v-sp-0UU" id="c6t-8h-2Fl"/>
+                        <outlet property="sourceMainView" destination="sGQ-0f-2iW" id="tZo-Db-kNR"/>
+                        <outlet property="sourceView" destination="imD-og-TRH" id="636-OK-0pz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--WeatherVC-->
+        <scene sceneID="K3p-oE-tAX">
+            <objects>
+                <viewController storyboardIdentifier="WeatherVC" id="or3-Kf-KYW" customClass="WeatherVC" customModule="Taxi_Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yyV-Yu-PcO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBack" translatesAutoresizingMaskIntoConstraints="NO" id="AXN-Qh-V5c">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3g6-wa-7cz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <searchBar contentMode="redraw" placeholder="City Name" translatesAutoresizingMaskIntoConstraints="NO" id="T9R-Db-vhF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hbU-sh-W5Y">
+                                <rect key="frame" x="20" y="115" width="374" height="747"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W55-fC-fnp"/>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.56470588239999997" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T9R-Db-vhF" firstAttribute="top" secondItem="W55-fC-fnp" secondAttribute="top" id="0iH-HP-S0u"/>
+                            <constraint firstItem="W55-fC-fnp" firstAttribute="bottom" secondItem="AXN-Qh-V5c" secondAttribute="bottom" id="8GC-yF-pIJ"/>
+                            <constraint firstItem="3g6-wa-7cz" firstAttribute="top" secondItem="T9R-Db-vhF" secondAttribute="top" id="GtM-S8-dI6"/>
+                            <constraint firstItem="AXN-Qh-V5c" firstAttribute="top" secondItem="W55-fC-fnp" secondAttribute="top" id="KGh-eu-I9j"/>
+                            <constraint firstItem="W55-fC-fnp" firstAttribute="trailing" secondItem="hbU-sh-W5Y" secondAttribute="trailing" constant="20" id="PSg-Xj-rs0"/>
+                            <constraint firstItem="W55-fC-fnp" firstAttribute="trailing" secondItem="AXN-Qh-V5c" secondAttribute="trailing" id="Qmq-RB-1Dd"/>
+                            <constraint firstItem="T9R-Db-vhF" firstAttribute="leading" secondItem="W55-fC-fnp" secondAttribute="leading" id="RoW-sk-Jt7"/>
+                            <constraint firstItem="T9R-Db-vhF" firstAttribute="trailing" secondItem="W55-fC-fnp" secondAttribute="trailing" id="Ryy-eF-SvI"/>
+                            <constraint firstItem="3g6-wa-7cz" firstAttribute="trailing" secondItem="T9R-Db-vhF" secondAttribute="trailing" id="hGZ-Lp-A53"/>
+                            <constraint firstItem="hbU-sh-W5Y" firstAttribute="leading" secondItem="W55-fC-fnp" secondAttribute="leading" constant="20" id="ipA-ng-OUj"/>
+                            <constraint firstItem="W55-fC-fnp" firstAttribute="bottom" secondItem="hbU-sh-W5Y" secondAttribute="bottom" id="jsB-Vr-7PO"/>
+                            <constraint firstItem="3g6-wa-7cz" firstAttribute="bottom" secondItem="T9R-Db-vhF" secondAttribute="bottom" id="q1x-RQ-UWj"/>
+                            <constraint firstItem="hbU-sh-W5Y" firstAttribute="top" secondItem="T9R-Db-vhF" secondAttribute="bottom" constant="20" id="rpE-CH-Dff"/>
+                            <constraint firstItem="3g6-wa-7cz" firstAttribute="leading" secondItem="T9R-Db-vhF" secondAttribute="leading" id="tEa-oN-0bY"/>
+                            <constraint firstItem="AXN-Qh-V5c" firstAttribute="leading" secondItem="W55-fC-fnp" secondAttribute="leading" id="uxh-fB-dUn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="T9R-Db-vhF" id="iPh-9b-4Ng"/>
+                        <outlet property="tableView" destination="hbU-sh-W5Y" id="VAw-9C-dYU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJV-dN-xVF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905.79710144927549" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="imageBack" width="339" height="509"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
